@@ -1,0 +1,21 @@
+/* Google Fonts available for use: 
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Libre Barcode 128 Text', cursive; */
+
+
+.container {
+    max-width: 50%;
+    margin: auto;
+}
+
+#title{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2em;
+    
+}
+
+#footer{
+    font-family: 'Libre Barcode 128 Text', cursive;
+}

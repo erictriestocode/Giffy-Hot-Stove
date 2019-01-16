@@ -4,6 +4,8 @@
 // personal use: reference movie generator here: file:///C:/Users/eric/Google%20Drive/Northwestern/Trilogy/Session%201-8/09-ClickJSON/Unsolved/click-json.html
 // Ended up referencing this file a lot.
 
+
+
 var buttonsInit = ["salty", "Deal with it", "Dumpster Fire"]
 // maybe use this below to debug and just pull trending
 // var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=hjdE9lx9cGidHy5CN2GtAf1oyDZ9nEJN";

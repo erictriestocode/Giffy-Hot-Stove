@@ -7,7 +7,7 @@
     <title>Giphy Hot Stove!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- **** Stylesheets **** -->
-    <!-- Adding the unsemantic stylesheet for responsiveness -->
+    <!-- Adding the unsemantic stylesheet for responsiveness(being lazy) -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/unsemantic-grid-responsive-tablet.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,10 +24,11 @@
         <div class="grid-100" id="instructions">
             <p>Click on a button to get the GIFs of your choice!</p>
         </div>
+        <!-- probably use a list here instead -->
         <div class="grid-100" id="buttons">
-            <button>Salty</button>
-            <button>Deal with it</button>
-            <button>Dumpster Fire</button>
+            <button id="salty">Salty</button>
+            <button id="dwi">Deal with it</button>
+            <button id="dumpsterfire">Dumpster Fire</button>
             <button>Add your own!</button>
         </div>
         <div class="grid-100" id="results">

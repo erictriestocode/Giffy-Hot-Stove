@@ -7,7 +7,7 @@
     <title>Giphy Hot Stove!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- **** Stylesheets **** -->
-    <!-- Adding the unsemantic stylesheet for responsiveness(being lazy) -->
+    <!-- Adding the unsemantic stylesheet for responsiveness(being lazy) https://unsemantic.com/ -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/unsemantic-grid-responsive-tablet.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,20 +24,18 @@
         <div class="grid-100" id="instructions">
             <p>Click on a button to get the GIFs of your choice!</p>
         </div>
-        <div id="premade-buttons"></div>
+        <div id="premade-buttons" class="grid-100"></div>
         <form id="add-button">
-            <label for="gif-input" id="gif-input">Search for a Gif!</label>
+            <label for="gif-search" id="gif-input">Search for a Gif!</label>
             <input type="text" id="gif-search">
             <!-- Add search term button, inspired by in class assignment click-json(09) -->
-            <input id="search-gif" type="submit" value="Add Gif Search!">
+            <input id="search-term" type="submit" value="Add Gif Search button!">
         </form>
 
-        <div class="grid-100" id="buttons">
-            
-        </div>
-        <div class="grid-100" id="gif-results">
+        <!-- <div class="grid-100" id="buttons"></div> -->
 
-        </div>
+        <div class="grid-100" id="gif-results"></div>
+
         <div class="grid-100" id="footer">
             <h3>Copyright 2018 Eric Northrop | Thanks to Giphy</h3>
         </div>

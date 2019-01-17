@@ -4,6 +4,9 @@ font-family: 'Bangers', cursive;
 font-family: 'Oswald', sans-serif;
 font-family: 'Libre Barcode 128 Text', cursive; */
 
+body{
+    background-color: gray;
+}
 
 .container {
     max-width: 50%;
@@ -17,6 +20,11 @@ font-family: 'Libre Barcode 128 Text', cursive; */
 
 #instructions{
     font-family: 'Oswald', sans-serif;
+}
+
+#premade-buttons{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #gif-input{

@@ -19,19 +19,23 @@
 <body>
     <div class="container grid-container">
         <div class="grid-100" id="title">
-            <h1>Test!</h1>
+            <h1>Giphy Hot Stove!</h1>
         </div>
         <div class="grid-100" id="instructions">
             <p>Click on a button to get the GIFs of your choice!</p>
         </div>
-        <!-- probably use a list here instead -->
+        <div id="premade-buttons"></div>
+        <form id="add-button">
+            <label for="gif-input" id="gif-input">Search for a Gif!</label>
+            <input type="text" id="gif-search">
+            <!-- Add search term button, inspired by in class assignment click-json(09) -->
+            <input id="search-gif" type="submit" value="Add Gif Search!">
+        </form>
+
         <div class="grid-100" id="buttons">
-            <button id="salty">Salty</button>
-            <button id="dwi">Deal with it</button>
-            <button id="dumpsterfire">Dumpster Fire</button>
-            <button>Add your own!</button>
+            
         </div>
-        <div class="grid-100" id="results">
+        <div class="grid-100" id="gif-results">
 
         </div>
         <div class="grid-100" id="footer">

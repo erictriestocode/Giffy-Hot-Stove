@@ -13,7 +13,14 @@ font-family: 'Libre Barcode 128 Text', cursive; */
 #title{
     font-family: 'Luckiest Guy', cursive;
     font-size: 2em;
-    
+}
+
+#instructions{
+    font-family: 'Oswald', sans-serif;
+}
+
+#gif-input{
+    font-family: 'Oswald', sans-serif;
 }
 
 #footer{

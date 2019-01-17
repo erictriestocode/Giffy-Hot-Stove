@@ -14,7 +14,6 @@ Start of File!
 // Array of initial buttons, named topics per instructions
 var topics = ["Salty", "Deal with it", "Dumpster Fire", "Everything is Fine"];
 var userVal = '';
-var gifWad;
 
 
 $(document).ready(function () {
@@ -66,26 +65,44 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response.data);
 
+            $("#gif-results").append("<img src=" + response.data[0].images.original.url + ">")
+
             // for loop to go thru the response data and append the html to the gif-results div
 
             // for (i = 0; i < response.length; i++) {
             //     $("#gif-results").append(
-            //         "<img src=" + response.data[i].images.downsized.url + ">"
-            //         "<br>"
-            //         "<div class='rating'><h5>Gif rating: " + response.data[i].rating + "</h5></div>"
-            //     );
+            //   
             // };
-
-
-
-
-
-
 
 
         });
 
     });
+
+    // function definitely lifted and modified from the json click assignment
+    function renderButtons() {
+
+        // Deleting the buttons prior to adding new gif search terms
+        // (this is necessary otherwise you will have repeat buttons)
+        $("#premade-buttons").empty();
+        console.log("renderbuttons fired!")
+        // Looping through the array of movies
+        for (var i = 0; i < topics.length; i++) {
+            console.log("loop has worked " + i);
+            // Then dynamically generating buttons for each term in the array
+            // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+            var a = $("<button>");
+            // Adding a class of movie to our button
+            a.addClass("term");
+            // Adding a data-attribute
+            a.attr("data-name", topics[i]);
+            // Providing the initial button text
+            a.text(topics[i]);
+            // Adding the button to the buttons-view div
+            $("#premade-buttons").append(a);
+        }
+    };
+
 
 
 
@@ -94,30 +111,6 @@ $(document).ready(function () {
 
 
 
-
-// function definitely lifted and modified from the json click assignment
-function renderButtons() {
-
-    // Deleting the buttons prior to adding new gif search terms
-    // (this is necessary otherwise you will have repeat buttons)
-    $("#premade-buttons").empty();
-    console.log("renderbuttons fired!")
-    // Looping through the array of movies
-    for (var i = 0; i < topics.length; i++) {
-        console.log("loop has worked " + i);
-        // Then dynamically generating buttons for each term in the array
-        // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-        var a = $("<button>");
-        // Adding a class of movie to our button
-        a.addClass("term");
-        // Adding a data-attribute
-        a.attr("data-name", topics[i]);
-        // Providing the initial button text
-        a.text(topics[i]);
-        // Adding the button to the buttons-view div
-        $("#premade-buttons").append(a);
-    }
-};
 
 
 

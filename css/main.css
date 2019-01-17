@@ -45,6 +45,8 @@ body{
 }
 
 #gif-results{
+    display: flex;
+    justify-content: center;
 }
 
 #footer{

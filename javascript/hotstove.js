@@ -26,6 +26,7 @@ $(document).ready(function () {
     // $("#results").html("<img src =" + xhr.data[0].images.original.url + ">");
     renderButtons();
 
+    //  Function to generate buttons based on initial topics array and additional terms from users. 
     // function definitely lifted and modified from json click assignment
     $("#search-term").on("click", function (event) {
         event.preventDefault();
@@ -38,7 +39,12 @@ $(document).ready(function () {
         renderButtons();
     });
 
-    
+    // primary gif click functionality
+    $("#term").on('click', function() {
+        console.log("button clicked!");
+
+    });
+
 });
 
 

@@ -34,6 +34,11 @@ body{
     margin: 1em;
 }
 
+#add-button{
+    display:flex;
+    justify-content: center;
+}
+
 #gif-input{
     font-family: 'Oswald', sans-serif;
 
@@ -45,4 +50,10 @@ body{
     justify-content: space-evenly;
     padding: 1em;
     font-size: 1.2em;
+}
+
+#hotstove{
+    display: flex;
+    justify-content: center;
+    opacity: .5;
 }

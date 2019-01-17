@@ -40,7 +40,9 @@ $(document).ready(function () {
     });
 
     // primary gif click functionality
-    $("#term").on('click', function() {
+    // not really working and inspiring a lot of rage
+    $(document).on('click', 'premade-buttons.term', function () {
+        alert("Button clicked!");
         console.log("button clicked!");
 
     });
@@ -61,7 +63,7 @@ function renderButtons() {
     // Looping through the array of movies
     for (var i = 0; i < topics.length; i++) {
         console.log("loop has worked " + i);
-        // Then dynamically generating buttons for each movie in the array
+        // Then dynamically generating buttons for each term in the array
         // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
         var a = $("<button>");
         // Adding a class of movie to our button
@@ -84,17 +86,8 @@ function renderButtons() {
 
 
 
-
-
-
-
-
-
-
-
-
 /*
-SHIT CODE BELOW THAT DIDNT WORK
+SHIT CODE BELOW THAT DIDNT WORK OR MAYBE DID AND I USED IT IN A DIFFERENT WAY
 
 
 // maybe use this below to debug and just pull trending

@@ -6,13 +6,13 @@ Start of File!
 // remember to query via https
 // personal use: reference movie generator here: file:///C:/Users/eric/Google%20Drive/Northwestern/Trilogy/Session%201-8/09-ClickJSON/Unsolved/click-json.html
 // Ended up referencing this file a lot.
-// jquery createImg!
+// jquery createImg! <- nope part of bogus library that is not used here and nonstandard
 */
 
 //  ************** START ATTEMPT AT REAL CODE **************
 
 // Array of initial buttons, named topics per instructions
-var topics = ["Salty", "Deal with it", "Dumpster Fire","Everything is Fine"];
+var topics = ["Salty", "Deal with it", "Dumpster Fire", "Everything is Fine"];
 var userVal = '';
 var gifWad;
 
@@ -20,18 +20,18 @@ var gifWad;
 $(document).ready(function () {
     // Test log
     console.log("it works!");
-        // Just get and console log out giphy return(code from Giphy API documentation, modified for assignment)
+    // Just get and console log out giphy return(code from Giphy API documentation, modified for assignment)
     // limit to 10 results per homework instructions
     // changed data to response to reduce confusion
-    var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=dumpster+fire&api_key=hjdE9lx9cGidHy5CN2GtAf1oyDZ9nEJN&limit=10");
-    xhr.done(function (response) { 
-        console.log("success got data", response);
-        var gifWad = response.data;
-});
- 
+    // var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=dumpster+fire&api_key=hjdE9lx9cGidHy5CN2GtAf1oyDZ9nEJN&limit=10");
+    // xhr.done(function (response) {
+    //     console.log("success got data", response);
+    //     // call it gifWad for a wad of gifs I guess¯\_(ツ)_/¯
+    //     var gifWad = response.data;
+    // });
+
     // $("#results").html("<img src =" + xhr.data[0].images.original.url + ">");
     renderButtons();
-
     //  Function to generate buttons based on initial topics array and additional terms from users. 
     // function definitely lifted and modified from json click assignment
     $("#search-term").on("click", function (event) {
@@ -51,17 +51,47 @@ $(document).ready(function () {
     $('#premade-buttons').on('click', '.term', function () {
         //button clicks and logs
         console.log("button clicked!");
+        $("#gif-results").empty();
         // somehow try and get the attribute of the button that is clicked and store as butVal
         var userVal = $(this).attr("data-name");
         // haha, butVal
         console.log(userVal);
-        // Stuck here for the night
-        console.log(gifWad[0].id);
+
+        //var gifName = $(this).attr("data-name");
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + userVal + "&api_key=hjdE9lx9cGidHy5CN2GtAf1oyDZ9nEJN&limit=10";
+
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+        }).then(function (response) {
+            console.log(response.data);
+
+            // for loop to go thru the response data and append the html to the gif-results div
+
+            // for (i = 0; i < response.length; i++) {
+            //     $("#gif-results").append(
+            //         "<img src=" + response.data[i].images.downsized.url + ">"
+            //         "<br>"
+            //         "<div class='rating'><h5>Gif rating: " + response.data[i].rating + "</h5></div>"
+            //     );
+            // };
+
+
+
+
+
+
+
+
+        });
+
     });
-    
+
 
 
 });
+
+
 
 
 

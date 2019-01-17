@@ -1,2 +1,2 @@
-# Giffy-Hot-Stove
+# Giphy-Hot-Stove
 Homework 6 Repository

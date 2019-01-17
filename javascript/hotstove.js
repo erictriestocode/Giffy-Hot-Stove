@@ -12,7 +12,7 @@ Start of File!
 //  ************** START ATTEMPT AT REAL CODE **************
 
 // Array of initial buttons, named topics per instructions
-var topics = ["Salty", "Deal with it", "Dumpster Fire"];
+var topics = ["Salty", "Deal with it", "Dumpster Fire","Everything is Fine"];
 var userVal = '';
 var gifWad;
 

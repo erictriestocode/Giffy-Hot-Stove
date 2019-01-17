@@ -44,6 +44,9 @@ body{
 
 }
 
+#gif-results{
+}
+
 #footer{
     font-family: 'Libre Barcode 128 Text', cursive;
     display: flex;
@@ -53,7 +56,6 @@ body{
 }
 
 #hotstove{
-    display: flex;
-    justify-content: center;
+    width:50%;
     opacity: .5;
 }

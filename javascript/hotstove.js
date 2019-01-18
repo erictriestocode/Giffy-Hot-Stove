@@ -65,13 +65,15 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response.data);
 
-            // $("#gif-results").append("<img src=" + response.data[0].images.original.url + ">")
+            $("#gif-results").append("<img src=" + response.data[0].images.original.url + ">")
 
             // for loop to go thru the response data and append the html to the gif-results div
 
-            for (i = 0; i < response.length; i++) {
-                $("#gif-results").append("<img src=" + response.data[i].images.original.url + ">")
-            };
+            // So my loop isn't working. Nick took a look at it during break and was stumped, so I don't feel too bad but its going to bother me and I'll try to fix it.
+
+            // for (i = 0; i < response.length; i++) {
+            //     $("#gif-results").append("<img src=" + response.data[i].images.original.url + ">")
+            // };
 
 
         });

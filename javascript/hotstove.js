@@ -51,9 +51,9 @@ $(document).ready(function () {
         //button clicks and logs
         console.log("button clicked!");
         $("#gif-results").empty();
-        // somehow try and get the attribute of the button that is clicked and store as butVal
+        // somehow try and get the attribute of the button that is clicked and store as butVal(DEPRECATED, IGNORE)
         var userVal = $(this).attr("data-name");
-        // haha, butVal
+        // haha, butVal(DEPRECATED, IGNORE)
         console.log(userVal);
 
         //var gifName = $(this).attr("data-name");

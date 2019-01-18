@@ -65,14 +65,13 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response.data);
 
-            $("#gif-results").append("<img src=" + response.data[0].images.original.url + ">")
+            // $("#gif-results").append("<img src=" + response.data[0].images.original.url + ">")
 
             // for loop to go thru the response data and append the html to the gif-results div
 
-            // for (i = 0; i < response.length; i++) {
-            //     $("#gif-results").append(
-            //   
-            // };
+            for (i = 0; i < response.length; i++) {
+                $("#gif-results").append("<img src=" + response.data[i].images.original.url + ">")
+            };
 
 
         });
